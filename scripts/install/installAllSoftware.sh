@@ -14,29 +14,8 @@ bash ${DIR_ME}/installOpenVSCodeServer.sh
 echo -e "\n\nInstalling docker & docker-compose apt"
 bash ${DIR_ME}/installDocker.sh
 
-echo -e "\n\nInstalling OpenJDK 11 via apt..."
-bash ${DIR_ME}/installOpenjdk.sh
-
-echo -e "\n\nInstalling Apache Maven manually..."
-bash ${DIR_ME}/installMaven.sh
-
-echo -e "\n\nInstalling Gradle manually..."
-bash ${DIR_ME}/installGradle.sh
-
-echo -e "\n\nInstalling node.js via n..."
-bash ${DIR_ME}/installNodejs.sh
-
-echo -e "\n\nInstalling rust..."
-bash ${DIR_ME}/installRust.sh
-
-echo -e "\n\nInstalling deno..."
-bash ${DIR_ME}/installDeno.sh
-
-echo -e "\n\nInstalling Google Chrome..."
-bash ${DIR_ME}/installChrome.sh
-
-echo -e "\n\nInstalling KVM & QEMU..."
-bash ${DIR_ME}/installKvm.sh
+echo -e "\n\nInstalling DevTool (dt)"
+curl -sSL https://github.intel.com/raw/vpgsw/devtool/master/scripts/linux_install.sh | bash
 
 # clean-up
 sudo apt autoremove
